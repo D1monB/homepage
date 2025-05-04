@@ -2,9 +2,185 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="index.js"></script>
     <title>Résumé</title>
 </head>
 <body>
-― Hello World! &#x1F609;
+    <main>
+        <div class="resume">
+            <div class="slider">
+                <div class="slider__wrapper">
+                    <div class="slider__inner">
+                        <div class="container">
+                            <div class="resume__block">
+                                <h1 class="contact-info__header">Dima Bohachuk</h1>
+                                <h3 class="contact-info__sub-header">Full-Stack Developer</h3>
+
+                                <div class="contact_info_container fv">
+
+                                    <div class="contact-info__block contact-info__block--center">
+                                        <img
+                                                class="contact-info__avatar"
+                                                src="assets/avatar.png"
+                                                alt="Avatar"
+                                        />
+                                    </div>
+                                    <div class="contact-info__block">
+                                        <a href="https://www.instagram.com/dima_bohachuk/" rel="author" class="contact-info__item" tabindex="0">
+                                            <div class="contact-info__item-icon-wrapper">
+                                                <img class="contact-info__item-icon" src="./assets/instagram.svg" alt="Instagram">
+                                            </div>
+                                            <span>Instagram</span>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/dima-bohachuk-21a737237/" rel="author" class="contact-info__item" tabindex="0">
+                                            <div class="contact-info__item-icon-wrapper">
+                                                <img class="contact-info__item-icon" src="./assets/linkedin.svg" alt="Linkedin">
+                                            </div>
+                                            <span>Linkedin</span>
+                                        </a>
+                                        <a href="https://t.me/dima_bohachuk" rel="author" class="contact-info__item" tabindex="0">
+                                            <div class="contact-info__item-icon-wrapper">
+                                                <img class="contact-info__item-icon" src="./assets/telegram.svg" alt="Telegram">
+                                            </div>
+                                            <span>Telegram</span>
+                                        </a>
+                                        <a href="https://www.google.com/maps?q=Vinnytsia,Ukraine" rel="author" class="contact-info__item" tabindex="0">
+                                            <div class="contact-info__item-icon-wrapper">
+                                                <img class="contact-info__item-icon contact-info__item-icon--location" src="./assets/location.svg" alt="Location">
+                                            </div>
+                                            <span>Vinnytsia, Ukraine</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="contact-info__block"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="resume__block">
+                                <div class="intro">
+                                    <div class="intro__icon-wrapper">
+                                        <svg class="intro__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7
+                                                24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0
+                                                26.5 21.5 48 48 48h128c26.5 0 48-21.5
+                                                48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64
+                                                64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6
+                                                32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5
+                                                48-48V304c0-26.5-21.5-48-48-48z"></path>
+                                        </svg>
+                                    </div>
+                                    <ul class="intro_text">
+                                        <li><span>👋 Привіт! Мене звати Dima, я frontend-розробник з Вінниці.</span></li>
+                                        <li><span>💻 Мій шлях веде через HTML/CSS, JavaScript </span> <code>("b" + "a" + + "a" + "a").toLowerCase()</code> → <strong>'banana'</strong> до сучасного стеку: <strong>React, Redux Toolkit, TypeScript</strong>.</span></li>
+                                        <li><span>🧩 Люблю структурувати складне, тому не боюся працювати з API, формами, бібліотеками та async-логікою.</span></li>
+                                        <li><span>🛠️ Пишу чистий, підтримуваний код. Завжди радий рефакторингу, якщо він покращує проект.</span></li>
+                                        <li><span>📦 Маю досвід з Git, працював у команді, створював пул-реквести та проходив code review.</span></li>
+                                        <li><span>🏃‍♂️ У вільний час займаюся спортом — це допомагає підтримувати енергію та фокус. Найбільше люблю футбол.</span></li>
+                                        <li><span>🎯 Моя ціль — стати впевненим junior-розробником, який приносить цінність і росте щодня.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="resume__block">
+                                <div class="skills">
+                                    <h3 class="skills__header">Skills</h3>
+                                    <ul class="skills__list">
+                                        <li><span><strong>React:</strong> Створюю масштабовані UI з компонентною архітектурою.</span></li>
+                                        <li><span><strong>Redux Toolkit:</strong> Ефективне управління станом, навіть у складних додатках.</span></li>
+                                        <li><span><strong>TypeScript:</strong> Пишу типізований код, який легко підтримувати.</span></li>
+                                        <li><span><strong>JavaScript (ES6+):</strong> Розумію тонкощі мови, працюю з DOM, асинхронністю.</span></li>
+                                        <li><span><strong>HTML5 & CSS3:</strong> Адаптивна та семантична верстка, Flexbox, Grid.</span></li>
+                                        <li><span><strong>Git & GitHub:</strong> Впевнена командна робота, досвід Pull Request та вирішення конфліктів.</span></li>
+                                        <li><span><strong>REST API:</strong> Взаємодія з сервером, обробка JSON-даних, Axios.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="resume__block">
+                                <div class="main-info fh">
+                                    <div class="experiences">
+                                        <h3 class="experiences__header">Experience</h3>
+                                        <div class="experiences__company">
+                                            <div class="experiences__company-header">
+                                                <span class="experiences__company-header-durability">July 2024 - October 2024</span>
+                                                <h3 class="experiences__company-header-name">SoftServe Academy</h3>
+                                            </div>
+
+                                            <div class="experiences__company-project">
+                                                <span class="experiences__company-project-role">Frontend Developer Trainee</span>
+                                                <h3 class="experiences__company-project-name">Practical React</h3>
+                                                <p class="experiences__company-project-description">
+                                                    Отримав сертифікат про закінчення, отримав практичні знання основ React, включаючи роботу з компонентами, станом, пропами, хуками та інтеграцією Redux.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="additional-info fv">
+                                        <div class="additional-info__education">
+                                            <h3 class="additional-info__education-header">Education</h3>
+                                            <div class="additional-info__education-university">
+                                                <span class="additional-info__education-university-durability">2020–2024</span>
+                                                <h3 class="additional-info__education-university-speciality">Software Engineering</h3>
+                                                <p class="additional-info__education-university-name">
+                                                    Vinnytsia National Technical University (ВНТУ)
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="additional-info__languages">
+                                            <h3 class="additional-info__languages-header">Languages</h3>
+                                            <p class="additional-info__languages-item">Ukrainian – Native</p>
+                                            <p class="additional-info__languages-item">English – B1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="container">
+                            <div class="resume__block">
+                                <div class="main-info fh">
+                                    <div class="experiences">
+                                        <h3 class="experiences__header">Experience (Pet Projects)</h3>
+                                        <div class="experiences__company">
+                                            <div class="experiences__company-header">
+                                                <span class="experiences__company-header-durability">2024–Present</span>
+                                                <h3 class="experiences__company-header-name">Pet Projects</h3>
+                                            </div>
+
+                                            <div class="experiences__company-project">
+                                                <h3 class="experiences__company-project-name">Marvel DB, Tune Manager, Weather app, Pizza app</h3>
+                                                <ul class="experiences__company-project-responsibilities">
+                                                    <li>Реалізація маршрутизації та управління навігацією за допомогою React Router</li>
+                                                    <li>Керування глобальним станом за допомогою Redux Toolkit</li>
+                                                    <li>Типізація пропсів, функцій та складних структур даних із використанням TypeScript</li>
+                                                    <li>Розробка сервісів для взаємодії з API (Axios/Fetch), з обробкою помилок та лоадерами</li>
+                                                    <li>Практичне використання React-хуків для керування життєвим циклом і взаємодії з DOM</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__pagination">
+                    <span data-slide="0" class="active"></span>
+                    <span data-slide="1"></span>
+                    <span data-slide="2"></span>
+                    <span data-slide="3"></span>
+                    <span data-slide="4"></span>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
