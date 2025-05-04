@@ -5,21 +5,21 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
-
-    --primary-text-color: #181820;
-    --secondary-text-color: #5c5c62;
-    --durability-text-color: #6a737d9c;
-    --icon-color: #6a737d;
-    --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+    --primary-text-color: #2c3e50;
+    --secondary-text-color: #7f8c8d;
+    --durability-text-color: #95a5a6;
+    --icon-color: #34495e;
+    --border-color: #ecf0f1;
+    --text-decoration-color: #2980b9;
 }
 
 .container {
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 clamp(5px, calc(100vw * (30 / 900)) ,30px);
     max-width: 900px;
+    width: 100%;
 }
 
 .fh {
@@ -36,16 +36,61 @@ body {
 
 .resume {
     background: linear-gradient(45deg, rgb(255, 255, 255), rgb(255 252 245));
-    margin: 50px auto;
+    margin: clamp(5px, calc(100vw * (30 / 900)), 50px) auto;
     border: 1px solid #f5f5f5;
-    box-shadow: 1px 1px 7px 7px #f5f5f5;
-    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(4, 0, 0, 0.1), 4px 10px 20px rgba(0, 0, 0, 0.05);
+    padding: clamp(10px, calc(100vw * (30 / 900)) ,30px) 0;
     max-width: 900px;
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+}
+
+.slider__wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider__inner {
+    width: 500%;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.slider__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -5px;
+    position: absolute;
+    width: 100%;
+    max-width: 320px;
+}
+
+.slider__pagination span {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #bdc3c7;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider__pagination span:hover {
+    background-color: #2980b9;
+}
+
+.slider__pagination span.active {
+    background-color: #2980b9;
 }
 
 .resume__block {
     padding-bottom: 15px;
-    border-bottom: 3px solid var(--border-color);
     margin-bottom: 15px;
 }
 
@@ -60,14 +105,13 @@ body {
     }
 
     .contact-info__block:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 45px;
     }
 
     .experiences {
         margin-right: 0;
     }
 }
-
 
 /***************/
 
@@ -93,6 +137,8 @@ body {
     justify-content: space-between;
 }
 
+
+
 .contact-info__block--center {
     justify-content: center;
 }
@@ -104,7 +150,6 @@ body {
     justify-content: start;
     align-items: center;
 }
-
 
 .contact-info__item-icon-wrapper {
     margin-right: 10px;
@@ -135,6 +180,26 @@ body {
     margin-bottom: 30px;
 }
 
+@media screen and (max-width: 991.98px) {
+    .contact-info__block {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .contact-info__item{
+        flex: 1 1 49%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .contact-info__item{
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+}
+
 /***************/
 
 .intro {
@@ -159,9 +224,13 @@ body {
 }
 
 .intro_text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     color: var(--secondary-text-color);
     text-align: justify;
 }
+
 
 .skills__header {
     color: var(--secondary-text-color);
@@ -169,9 +238,17 @@ body {
     margin-bottom: 15px;
 }
 
-.skills__text {
+
+.skills__list {
+    padding-left: clamp(5px, calc(100vw * (40/ 900)) ,40px);
     color: var(--secondary-text-color);
     text-align: justify;
+}
+
+@media screen and (max-width: 567px) {
+    .intro__icon-wrapper{
+        display: none;
+    }
 }
 
 /*************/
@@ -202,6 +279,7 @@ body {
     margin-bottom: 20px;
 }
 
+
 .experiences__company-project {
     margin-left: 15px;
     margin-bottom: 25px;
@@ -218,6 +296,10 @@ body {
     color: var(--primary-text-color);
     text-align: left;
     margin-bottom: 10px;
+}
+
+.experiences__company-project-description{
+    color: var(--secondary-text-color);
 }
 
 .experiences__company-project-responsibilities {
